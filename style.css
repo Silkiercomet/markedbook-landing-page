@@ -376,3 +376,119 @@ nav ul li:last-child{
 
 /* FAQ */
 
+/* sign-up */
+
+.sign-up{
+    background-color: var(--softBlue);
+    height: 330px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sign-up .sign-up-header > *{
+    color:white;
+    text-align: center;
+}
+.sign-up-header p{
+    padding-bottom: 2.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.sign-up-header h1{
+    width: 20ch;
+    font-weight: 500;
+    padding-bottom: 1.7rem;
+}
+.sign-up-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+}
+#email{
+    height: 2.7rem;
+    padding: 0.9rem 1rem;
+    width: 250px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+}
+#email:focus{
+    outline: none;
+}
+.mail-input{
+    position: relative;
+    
+}
+.error{
+    display: none;
+    width: 100%;
+    color: white;
+    position: absolute;
+    bottom: -1.5rem;
+    background-color: var(--softRed);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 0.8rem;
+    font-style: italic;
+    padding-left: 0.9rem;
+}
+.sign-btn{
+    margin-left: 1rem;
+    background-color: var(--softRed);
+    color: white;
+}
+
+/* sign-up */
+
+/* footer */
+
+footer{
+    background-color: var(--veryDarkBlue);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 6rem; 
+    
+}
+
+footer .left{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+footer .left nav ul {
+    padding-left: 1rem;
+}
+footer .left nav ul li{
+    padding: 0 1.5rem;
+    font-weight: 400;
+}
+.social-media-icons ul{
+    list-style: none;
+    display: flex;
+    
+}
+.social-media-icons ul li{
+    padding: 0 1rem;
+    
+}
+
+.social-media-icons ul li a i {
+    transition: 300ms ease;
+    color: white;
+  }
+  
+  .fa-twitter-square:hover {
+    color: hsl(210, 82%, 64%);
+  }
+  .fa-facebook-square:hover {
+    color: hsl(210, 87%, 49%);
+  }
+
+
+
+/* footer */
