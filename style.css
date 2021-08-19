@@ -231,9 +231,10 @@ nav ul li a:hover{
     width: 40ch;
     color: var(--grayBlue);
     padding: 1.5rem 0;
+    transition: 200ms ease-in-out;
 }
 .details .right h1{
-    
+    transition: 200ms ease-in-out;
     font-weight: 500;
     color: var(--veryDarkBlue);
 }
@@ -469,6 +470,12 @@ nav ul li a:hover{
     font-size: 0.8rem;
     font-style: italic;
     padding-left: 0.9rem;
+}
+#error-img{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 24%;
 }
 .sign-btn{
     margin-left: 1rem;
