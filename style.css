@@ -29,7 +29,7 @@ body{
     display: block;
     background-color: white;
     padding: 0.8rem 2rem ;
-    border: 0;
+    border: 1px solid transparent;
     border-radius: 0.25rem;
     box-shadow: 0 1px 5px rgba(199, 194, 194, 0.8);
     transition: all 500ms;
@@ -38,6 +38,7 @@ body{
     color: var(--veryDarkBlue);
     -webkit-box-shadow: 5px 5px 15px -1px rgba(37,43,70,0.175); 
     box-shadow: 5px 5px 15px -1px rgba(37,43,70,0.175);
+    transition: 200ms ease-in-out;
 }
 p{
     line-height: 1.5rem;
@@ -75,6 +76,7 @@ nav ul li a{
     font-weight: 400;
     font-size: .9rem;
     letter-spacing: 2px;
+    transition: 200ms ease-in-out;
 }
 nav ul li:last-child{
     padding-right: 0;
@@ -88,7 +90,9 @@ nav ul li:last-child{
     padding: .8rem 1.8rem;
     -webkit-box-shadow: 5px 5px 15px -1px rgba(37,43,70,0.275); 
     box-shadow: 5px 5px 15px -1px rgba(37,43,70,0.275);
-    transition: 200ms ease-in-out;
+}
+nav ul li a:hover{
+    color: var(--softRed);
 }
 #login-nav:hover{
     background-color: white;
@@ -130,8 +134,16 @@ nav ul li:last-child{
     color: white;
     margin-right: 1rem;
 }
-.btns .btn:nth-child(2){
-    opacity: 0.7;
+
+.btns .btn:nth-child(2):hover{
+    background-color: white;
+    color: var(--veryDarkBlue);
+    border-color: var(--veryDarkBlue);
+}
+.btns .btn:nth-child(1):hover{
+    background-color: white;
+    color: var(--softBlue);
+    border-color: var(--softBlue);
 }
 
 .hero .right {
@@ -188,6 +200,11 @@ nav ul li:last-child{
     width: 33%;
     padding: 1rem 0;
     color: var(--veryDarkBlue);
+    transition: 200ms ease-in-out;
+}
+.features-tab ul li:hover{
+    color: var(--softRed);
+    cursor: pointer;
 }
 .features-tab ul li:nth-child(1){
     border-bottom: 3px solid var(--softRed);
@@ -224,6 +241,11 @@ nav ul li:last-child{
     background-color: var(--softBlue);
     color: white;
     margin-top: 0.5rem;
+}
+.details .right a:hover{
+    background-color: white;
+    color: var(--softBlue);
+    border-color: var(--softBlue);
 }
 .details .left{
     flex: 1;
@@ -296,6 +318,11 @@ nav ul li:last-child{
     padding-right: 0.8rem;
     width: 200px;
 }
+.card .btn:hover{
+    background-color: white;
+    color: var(--softBlue);
+    border-color: var(--softBlue);
+}
 
 /* extensions */
 
@@ -307,7 +334,7 @@ nav ul li:last-child{
     place-items: center;
 }
 .accordion{
-    max-width: 550px;
+    width: 550px;
 }
 .faq-header {
     margin: 1.5rem 0;
@@ -335,6 +362,9 @@ nav ul li:last-child{
     border-top: 1px solid hsla(229, 8%, 60%,0.3);
     padding: 1rem 0;
 }
+.toggler:hover{
+    color: var(--softRed);
+}
 #faq-accordion:last-child{
     border-bottom: 1px solid hsla(229, 8%, 60%,0.3);
 }
@@ -348,6 +378,10 @@ nav ul li:last-child{
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+
+}
+.toggler .arrow-rot::after{
+    transform: rotate(180deg);
 
 }
 .toggler:hover{
@@ -365,13 +399,14 @@ nav ul li:last-child{
 .show{
     display: block;
 }
-.dark{
-    font-weight: 700;
-}
+
 .FAQ .btn{
     background-color: var(--softBlue);
     color: white;
     margin: 1rem 0;
+}
+.FAQ .btn:hover {
+    transform: scale(1.2);
 }
 
 /* FAQ */
@@ -440,6 +475,11 @@ nav ul li:last-child{
     background-color: var(--softRed);
     color: white;
 }
+.sign-btn:hover{
+    background-color: white;
+    color: var(--softRed);
+    border-color: var(--softRed);
+}
 
 /* sign-up */
 
@@ -466,6 +506,11 @@ footer .left nav ul {
 footer .left nav ul li{
     padding: 0 1.5rem;
     font-weight: 400;
+    transition: 200ms ease-in-out;
+}
+footer .left nav ul li:hover{
+    color: var(--softRed);
+    cursor: pointer;
 }
 .social-media-icons ul{
     list-style: none;
