@@ -53,7 +53,7 @@ console.log(tab[1])
 
 const cleanBorder = () => {
     for(let i = 0; i < tab.length; i++){
-        tab[i].style.borderBottom = 'none';
+        tab[i].style.borderBottom = '3px solid transparent';
     }
 }
 
