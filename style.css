@@ -610,6 +610,9 @@ footer .left nav ul li:hover{
         opacity: 0;
         transition: 400ms ease-in-out;
     }
+     .logo-change{
+        fill: #fff;
+    }
     .menu-list li a, .mobile-menu a{
         text-decoration: none;
         color: white;
