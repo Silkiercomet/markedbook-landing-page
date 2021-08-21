@@ -19,8 +19,9 @@ html{
     transition: 200ms ease-in-out;
     outline:1px solid var(--grayBlue);
     border-radius: 3px;
+}
+.btn:focus,#login-nav{
     transform: scale(1.1);
-    
 }
 
 body{
