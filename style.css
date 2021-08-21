@@ -4,7 +4,7 @@
     --softBlue: hsl(231, 69%, 60%);
     --softRed:hsl(0, 94%, 66%);
     --grayBlue: hsl(229, 8%, 60%);
-    --veryDarkBlue: hsl(229, 31%, 21%);
+    --veryDarkBlue: #252b46;
 }
 
 html{
@@ -51,12 +51,19 @@ h1{
 h3,span{
     color: var(--veryDarkBlue)
 }
-
+.dis-none{
+    display: none;
+}
 /* utilities */
 
 
 /* header - navbar */
-
+.head{
+    position: relative;
+}
+.mobile-drop{
+    display: none;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -559,13 +566,79 @@ footer .left nav ul li:hover{
         justify-content: space-between;
         align-items: center;
         padding: 2rem ;
+        position: relative;
     }
     .desktop{
         display: none;
     }
     .mobile{
-        display: block;
+        display: inline-block;
+        z-index: 1;
     }
+    header .logo{
+        z-index: 59;
+    }
+    .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: hsla(229, 31%, 21%,0.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        z-index: -59;
+        transition: 300ms ease-in-out;
+    }
+    .menu-list{
+        list-style: none;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 400ms ease-in-out;
+    }
+    .menu-list li a, .mobile-menu a{
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+    }
+    .mobile-menu #login-nav-mobile{
+        border: 3px solid white;
+        width: 81%;
+        text-align: center;
+        padding: 0.8rem 2.5rem;
+        opacity: 0;
+        transition: 400ms ease-in-out;
+    }
+    .menu-list li {
+        text-align: center;
+        padding: 1.5rem 0;
+        border-top: 1px solid var(--grayBlue);
+        width: 90%;
+    }
+    .mobile .icon-menu{
+        z-index: 99;
+    }
+    #m-menu:checked + .icon-menu .hamburguer svg path{
+        fill: #fff;
+    }
+    #m-menu:checked ~ .mobile-menu{
+        height: 100vh;
+    }
+    #m-menu:checked ~ .mobile-menu .menu-list{
+        opacity: 1;
+    }
+    #m-menu:checked ~ .mobile-menu #login-nav-mobile{
+        opacity: 1;
+    }
+
     
     /* header - navbar */
 
@@ -592,11 +665,12 @@ footer .left nav ul li:hover{
         position: relative;
     }
     .hero .right figure img {
-        z-index: 2;
+        z-index: -98;
         width: 90%;
 
     }
     .background-ilustration{
+        z-index: -99;
         width: 70% ;
         height: 65%;
     }
@@ -739,7 +813,7 @@ footer .left nav ul li:hover{
         place-items: center;
     }
     .accordion{
-        width: 100%;
+        width: 550px;
         padding: 2rem;
     }
     .faq-header {
@@ -768,6 +842,7 @@ footer .left nav ul li:hover{
         transition: all 0.3s ease-in-out;
         border-top: 1px solid hsla(229, 8%, 60%,0.3);
         padding: 1rem 0;
+        
     }
     .toggler:hover{
         color: var(--softRed);
@@ -786,6 +861,9 @@ footer .left nav ul li:hover{
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
 
+    }
+    .toggled{
+        text-align: start;
     }
 
     /* FAQ */
@@ -889,4 +967,10 @@ footer .left nav ul li:hover{
     /* footer */
 }
 
+@media (max-width:650px){
+    .accordion{
+        width: 100%;
+        padding: 2rem;
+    }
+}
 /* media quieries */
