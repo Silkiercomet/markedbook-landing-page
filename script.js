@@ -75,3 +75,18 @@ tab[0].addEventListener('click', function() {
     header.textContent = 'Bookmark in one click';
     paragraph.textContent = 'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.'
 })
+
+//logo change
+let logo = document.querySelector(".bookM"), counter = 0, menu = document.querySelector("#m-menu");
+
+const changeFill = () => {
+    if(counter == 0){
+        counter++;
+        logo.classList.toggle("logo-change")
+    }else{
+        counter = 0;
+        logo.classList.toggle("logo-change")
+    }
+} 
+menu.addEventListener("click", changeFill)
+
